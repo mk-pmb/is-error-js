@@ -1,6 +1,7 @@
 'use strict';
 
 var test = require('tape');
+var vm = require('vm');
 
 var isError = require('../index.js');
 
@@ -19,5 +20,23 @@ test('returns false for non-error', function t(assert) {
     assert.equal(isError(null), false);
     assert.equal(isError(undefined), false);
     assert.equal(isError({message: 'hi'}), false);
+    assert.end();
+});
+
+test('errors that inherit from Error', function t(assert) {
+    var error = Object.create(new Error());
+    assert.equal(isError(error), true);
+    assert.end();
+});
+
+test('errors from other contexts', function t(assert) {
+    var error = vm.runInNewContext('new Error()');
+    assert.equal(isError(error), true);
+    assert.end();
+});
+
+test('errors that inherit from Error in another context', function t(assert) {
+    var error = vm.runInNewContext('Object.create(new Error())');
+    assert.equal(isError(error), true);
     assert.end();
 });
