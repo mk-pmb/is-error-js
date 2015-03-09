@@ -18,6 +18,6 @@ test('returns true for error', function t(assert) {
 test('returns false for non-error', function t(assert) {
     assert.equal(isError(null), false);
     assert.equal(isError(undefined), false);
-    assert.equal(isError({ message: 'hi' }), false);
+    assert.equal(isError({message: 'hi'}), false);
     assert.end();
 });
