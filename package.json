@@ -1,14 +1,13 @@
-{
-  "name": "is-error",
-  "version": "2.2.0",
+{ "name": "is-error",
+  "version": "2.2.1",
   "description": "Detect whether a value is an error",
   "keywords": [],
   "author": "Raynos <raynos2@gmail.com>",
-  "repository": "git://github.com/Raynos/is-error.git",
+  "repository": "git://github.com/mk-pmb/is-error-js.git",
   "main": "index",
-  "homepage": "https://github.com/Raynos/is-error",
+  "homepage": "https://github.com/mk-pmb/is-error-js",
   "bugs": {
-    "url": "https://github.com/Raynos/is-error/issues",
+    "url": "https://github.com/mk-pmb/is-error-js/issues",
     "email": "raynos2@gmail.com"
   },
   "contributors": [
@@ -29,7 +28,7 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "http://github.com/Raynos/is-error/raw/master/LICENSE"
+      "url": "http://github.com/mk-pmb/is-error-js/raw/master/LICENSE"
     }
   ],
   "scripts": {
