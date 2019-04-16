@@ -1,5 +1,5 @@
 { "name": "is-error",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "Detect whether a value is an error",
   "keywords": [],
   "author": "Raynos <raynos2@gmail.com>",
@@ -7,13 +7,11 @@
   "main": "index",
   "homepage": "https://github.com/mk-pmb/is-error-js",
   "bugs": {
-    "url": "https://github.com/mk-pmb/is-error-js/issues",
-    "email": "raynos2@gmail.com"
+    "url": "https://github.com/mk-pmb/is-error-js/issues"
   },
   "contributors": [
-    {
-      "name": "Raynos"
-    }
+    "Raynos",
+    "M.K. (https://github.com/mk-pmb)"
   ],
   "dependencies": {},
   "devDependencies": {
@@ -25,12 +23,7 @@
     "tap-spec": "^2.1.1",
     "tape": "^3.4.0"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://github.com/mk-pmb/is-error-js/raw/master/LICENSE"
-    }
-  ],
+  "license": "MIT",
   "scripts": {
     "test": "npm run jshint -s && npm run cover -s",
     "unit-test": "node test/index.js | tap-spec",
@@ -38,7 +31,7 @@
     "cover": "istanbul cover --report html --print detail -- test/index.js && npm run check-cover -s",
     "check-cover": "istanbul check-coverage --branches=100 --lines=100 --functions=100",
     "view-cover": "opn ./coverage/index.html",
-    "travis": "npm run cover -s && istanbul report lcov && ((cat coverage/lcov.info | coveralls) || exit 0)"
+    "travis": "npm run cover -s && istanbul report lcov && ((cat coverage/lcov.info | coveralls) || true)"
   },
   "engine": {
     "node": ">= 0.8.x"
